@@ -31,7 +31,7 @@ query({"inputs": document.getElementById("prompt").value , timestamp: new Date()
         var src =  URL.createObjectURL(response)
         img.src = src
         fetch(src).then(response => response.json().then(data =>{
-            alert(data.error)
+            document.getElementById("status").innerHTML = "Error: " + data.error
         }))
         img.style.width = "250px"
         img.style.height = "250px"
