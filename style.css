@@ -46,6 +46,14 @@ body, html {
     animation: notif 1s forwards;
   }
 
+@keyframes back {
+    from {
+
+    } to {
+        transform: rotate(180deg);
+            }
+}
+
 @keyframes body {
     10% {
         opacity: .1;
@@ -143,7 +151,7 @@ body, html {
     font-family: 'Inclusive Sans', sans-serif;
     border-radius: 8px;
     overflow: hidden;
-    border-bottom: 1px solid blue;
+    border: 1px solid rgb(0,0,97);
 
 }
 
@@ -153,7 +161,7 @@ body, html {
 
 .start {
     width: 100%;
-    height: 130px;
+    height: 150px;
     background-color: rgb(2, 1, 22);
     display: block;
     margin-top:4%;
@@ -161,7 +169,7 @@ body, html {
     text-align: center;
     font-family: 'Inclusive Sans', sans-serif;
     border-radius: 8px;
-    border-bottom: 1px solid blue;
+    border: 1px solid rgb(0, 0, 97);
 
 }
 
@@ -250,6 +258,11 @@ body, html {
     background-color: rgb(2, 1, 22);
     height: 40px;
     width: 40px;
+}
+
+.back-img:hover {
+    cursor: pointer;
+    animation: back .5s forwards;
 }
 
 
