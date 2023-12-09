@@ -28,7 +28,11 @@ setTimeout(function(){
     document.getElementById("notif").style.display = "none"
 } , 2400)
 query({"inputs": document.getElementById("prompt").value , timestamp: new Date().getTime()}).then((response) => {
-        img.src = URL.createObjectURL(response)
+        var src =  URL.createObjectURL(response)
+        img.src = src
+        fetch(src).then(response => response.json().then(data =>{
+            alert(data.error)
+        }))
         img.style.width = "250px"
         img.style.height = "250px"
         img.style.marginLeft = "15px"
