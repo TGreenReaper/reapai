@@ -1,0 +1,301 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(2, 2, 53);
+    animation: body .5s ease-in;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&display=swap');
+
+@media only screen and (max-height:800px){
+    .nav .gen_img {
+        height: 250px;
+        width: 250px;
+        position: relative;
+        right:-.5%;
+        overflow: hidden;
+        top:3%;
+    }
+    .gen .gen-btn{
+        background-image: url("icons/buttons/play.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: rgb(2, 1, 22);
+        height: 30px;
+        width: 30px;
+        border: none;
+        padding: 0;
+        position: absolute;
+        top:25.5vh;
+    }
+}
+
+#notif {
+    width:130px;
+    height:50px;
+    background-color:blue;
+    border:1px solid black;
+    border-radius:5px;
+    text-align:center;
+    color:white;
+    position: absolute;
+    opacity: .4;
+    display: none;
+    font-family: sans-serif , 'Robotto';
+    animation: notif 1s forwards;
+  }
+
+@keyframes body {
+    10% {
+        opacity: .1;
+    }
+
+    20% {
+        opacity: .2;
+    }
+
+    30% {
+        opacity: .3;
+    }
+
+    40% {
+        opacity: .4;
+    }
+
+    50% {
+        opacity: .5;
+        width: 0%;
+        height: 0%;
+    }
+
+    60% {
+        opacity: .6;
+    }
+
+
+    90% {
+        opacity: .9;
+    }
+
+    100% {
+        opacity:1;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@keyframes notif {
+    from{
+        opacity: 0;
+        width: 0%;
+        height: 1%;
+    } to {
+        width:130px;
+        height:50px;
+    }
+}
+
+
+@keyframes go-btn{
+    50% {
+        opacity: .5;
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(10deg);
+    
+    }
+}
+
+
+@keyframes prompt {
+    from {
+
+    } to {
+        overflow-x: scroll;
+
+    }
+}
+.nav {
+    width: 100%;
+    height:40px;
+    background-color: rgb(2, 1, 22)
+}
+
+.nav .gen_img {
+    height: 40px;
+    width: 40px;
+    position: relative;
+    right:-.5%;
+    overflow: hidden;
+}
+
+.main {
+    width: 100%;
+    height: 130px;
+    background-color: rgb(2, 1, 22);
+    display: inline-block;
+    margin-top:2%;
+    color: blue;
+    text-align: center;
+    font-family: 'Inclusive Sans', sans-serif;
+    border-radius: 8px;
+    overflow: hidden;
+    border-bottom: 1px solid blue;
+
+}
+
+.main h1 {
+    font-style: italic;
+}
+
+.start {
+    width: 100%;
+    height: 130px;
+    background-color: rgb(2, 1, 22);
+    display: block;
+    margin-top:4%;
+    color: blue;
+    text-align: center;
+    font-family: 'Inclusive Sans', sans-serif;
+    border-radius: 8px;
+    border-bottom: 1px solid blue;
+
+}
+
+
+.start .go-btn {
+    background-image: url("icons/buttons/go.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgb(2, 1, 22);
+    height: 80px;
+    width: 80px;
+    border: none;
+    padding: 0;
+
+}
+
+.start .go-btn:hover{
+    animation: go-btn 1s forwards;
+    cursor: pointer;
+}
+
+
+.gen {
+    width: 100%;
+    height: 120px;
+    background-color: rgb(2, 1, 22);
+    display: inline-block;
+    margin-top:2%;
+    color: blue;
+    text-align: center;
+    font-family: 'Inclusive Sans', sans-serif;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#prompt {
+    width: 345px;
+    height: 20px;
+    border: 1px solid rgb(6, 6, 182);
+    color: white;
+    background-color: rgb(2, 1, 22);
+}
+
+#prompt:focus {
+    animation: prompt 1s forwards;
+    outline: none;
+    border: 3px solid rgb(6, 6, 182);
+
+}
+
+.gen .gen-btn{
+    background-image: url("icons/buttons/play.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgb(2, 1, 22);
+    height: 30px;
+    width: 30px;
+    border: none;
+    padding: 0;
+    position: relative;
+   
+}
+
+.results {
+    width: 100%;
+    height: auto;
+    background-color: rgb(2, 1, 22);
+    display: inline-block;
+    margin-top:4%;
+    color: blue;
+    text-align: center;
+    font-family: 'Inclusive Sans', sans-serif;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+.back-img {
+    border: none;
+    background-image: url("icons/buttons/back.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgb(2, 1, 22);
+    height: 40px;
+    width: 40px;
+}
+
+
+.prompts {
+    width: 100%;
+    height: 130px;
+    background-color: rgb(2, 1, 22);
+    display: inline-block;
+    margin-top:2%;
+    color: blue;
+    text-align: center;
+    font-family: 'Inclusive Sans', sans-serif;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.prompts #sav-prompt {
+    width: 200px;
+    border: 1px solid blue;
+    background-color: rgb(2, 1, 22);
+    position: relative;
+    top:25%;
+    color: white;
+
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+.prompts #sav-prompt:focus {
+    width: 250px;
+    outline: none;
+    color: white;
+    border: 1px solid blue;
+    background-color: rgb(2, 1, 22);
+    position: relative;
+    top:25%;
+}
+
+.prompts button {
+    background-color: rgb(6, 6, 182);
+    color: white;
+    border: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.prompts button:hover {
+    cursor: pointer;
+}
