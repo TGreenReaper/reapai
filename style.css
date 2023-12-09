@@ -140,9 +140,15 @@ body, html {
     overflow: hidden;
 }
 
+.nav a {
+    color: blue;
+    font-family: sans-serif , 'Robotto';
+
+}
+
 .main {
     width: 100%;
-    height: 130px;
+    height: auto;
     background-color: rgb(2, 1, 22);
     display: inline-block;
     margin-top:2%;
@@ -212,6 +218,7 @@ body, html {
     border: 1px solid rgb(6, 6, 182);
     color: white;
     background-color: rgb(2, 1, 22);
+    font-family: monospace;
 }
 
 #prompt:focus {
@@ -311,4 +318,17 @@ img:hover {
 }
 .prompts button:hover {
     cursor: pointer;
+}
+
+.er {
+    width: 100%;
+    height: auto;
+    background-color: rgb(2, 1, 22);
+    display: inline-block;
+    margin-top:2%;
+    color: blue;
+    text-align: center;
+    font-family: 'Inclusive Sans', sans-serif;
+    border-radius: 8px;
+    overflow: hidden;
 }
