@@ -85,3 +85,12 @@ document.addEventListener("keydown" , function(e){
         generate()
     }
   })
+
+function clear(){
+    document.querySelectorAll("img").forEach(img => img.remove())
+    document.getElementById("notif").style.display = "block"
+    document.getElementById("notif-txt").innerHTML = "Cleared!!"
+    setTimeout(function(){
+        document.getElementById("notif").style.display = "none"
+    } , 2100)
+}
