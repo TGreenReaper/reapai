@@ -13,6 +13,8 @@ async function query(data) {
 }
 
 function generate(){
+
+window.scrollTo(0,1000)
     
 let img = document.createElement("img")
 let load = document.createElement("img")
@@ -31,6 +33,7 @@ query({"inputs": document.getElementById("prompt").value , timestamp: new Date()
         var src =  URL.createObjectURL(response)
         img.src = src
         fetch(src).then(response => response.json().then(data =>{
+            $("#status").css("color" , "red")
             document.getElementById("status").innerHTML = "Error: " + data.error
         }))
         setTimeout(function(){
@@ -80,17 +83,17 @@ function load(){
 
 }
 
+function cle(){
+    $("img").remove()
+    document.getElementById("notif").style.display = "block"
+    document.getElementById("notif-txt").innerHTML = "Cleared!!"
+    setTimeout(function(){
+        document.getElementById("notif").style.display = "none"
+        document.getElementById("notif-txt").innerHTML = "Generating..."
+    } , 2100)
+}
 document.addEventListener("keydown" , function(e){
     if(e.ctrlKey && e.keyCode == 13){
         generate()
     }
   })
-
-function clear(){
-    document.querySelectorAll("img").forEach(img => img.remove())
-    document.getElementById("notif").style.display = "block"
-    document.getElementById("notif-txt").innerHTML = "Cleared!!"
-    setTimeout(function(){
-        document.getElementById("notif").style.display = "none"
-    } , 2100)
-}

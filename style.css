@@ -157,11 +157,21 @@ body, html {
     position: relative;
     right:-.5%;
     overflow: hidden;
+
+}
+
+.nav .mov_img {
+    height: 40px;
+    width: 40px;
+    position: relative;
+    right:-.8%;
+    overflow: hidden;
 }
 
 .nav a {
     color: blue;
     font-family: sans-serif , 'Robotto';
+    
 
 }
 
@@ -389,4 +399,24 @@ img:hover {
     overflow-x: hidden;
     position:relative;
    
+}
+
+
+.movies {
+    display:block;
+    width: 100%;
+    height: auto;
+    background-color: rgb(2, 2, 53);
+    position: relative;
+    margin-top:5%;
+}
+
+.movies img {
+    height: 200px;
+    width: 150px;
+    margin-left: 10px;
+}
+
+.movies img:hover {
+    cursor: pointer;
 }
