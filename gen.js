@@ -3,7 +3,7 @@ async function query(data) {
 	const response = await fetch(
 		"https://api-inference.huggingface.co/models/stablediffusionapi/juggernaut-xl-v5",
 		{
-			headers: { Authorization: "Bearer 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" , "Content-Type": "application/json" },
+			headers: { Authorization: "Bearer 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" },
 			method: "POST",
 			body: JSON.stringify(data),
 		}
