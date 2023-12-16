@@ -3,7 +3,7 @@ async function query(data) {
 	const response = await fetch(
 		"https://api-inference.huggingface.co/models/stablediffusionapi/juggernaut-xl-v5",
 		{
-			headers: { Authorization: "Bearer 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" , "Content-Type": "application/json" },
+			headers: { Authorization: "Bearer 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" , "Content-Type": "application/json" },
 			method: "POST",
 			body: JSON.stringify(data),
 		}
@@ -13,6 +13,8 @@ async function query(data) {
 }
 
 function generate(){
+
+
 
 window.scrollTo(0,1000)
     
@@ -38,7 +40,7 @@ query({"inputs": document.getElementById("prompt").value , timestamp: new Date()
         }))
         setTimeout(function(){
             document.getElementById("status").innerHTML = ""
-        } , 25000)
+        } , 5000)
         img.style.width = "250px"
         img.style.height = "250px"
         img.style.marginLeft = "15px"
